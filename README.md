@@ -1,2 +1,1 @@
-# DBMQ
-Docker-based Message Queuing Using @django &amp; @cockroachdb
+### DBMQ (Docker-based Message Queuing)
