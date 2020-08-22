@@ -1,0 +1,6 @@
+{
+    'LOCAL':
+    {
+        'INSTALLED_PACKAGES': False,
+    },
+}
