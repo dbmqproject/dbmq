@@ -7,5 +7,4 @@
   <img src="https://img.shields.io/badge/base%20package-Docker-blue?logo=docker">
   <img src="https://img.shields.io/github/license/lnxpy/DBMQ?color=blue&logo=gnu">
   <img src="https://img.shields.io/badge/webserver-Django3.1-blue?logo=django">
-  <img src="https://img.shields.io/twitter/url?label=Telegram&logo=telegram&style=social&url=https%3A%2F%2Ft.me%2Flnxpy">
 </p>
