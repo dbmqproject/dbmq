@@ -1,6 +1,9 @@
 {
-    'LOCAL':
-    {
-        'INSTALLED_PACKAGES': False,
+    "LOCAL": {
+        "INSTALLED_PACKAGES": false,
     },
+    "SETTINGS": {
+        "DOCKER_FILES": "./docker_files/",
+        "DOCKER_IMAGES": "./docker_images/"
+    }
 }
