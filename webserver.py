@@ -18,10 +18,10 @@ SERVER_CONFIGS = {
 
 DATABASES = {
     'CONTAINER': {
-        'NAME': 'container-name',
+        'NAME': 'django_db',
     },
-    'NAME': 'database-name',
+    'NAME': 'django',
     'SERVER': settings.Database.postgres,
-    'USERNAME': 'user',
-    'PASSWORD': 'pass',
+    'USERNAME': 'test',
+    'PASSWORD': 'test123',
 }
