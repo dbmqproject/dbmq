@@ -1,3 +1,11 @@
+"""
+This module includes all pre-build utilities you might need.
+Use the imported `settings` module in the webserver configs from the extras dir.
+
+For more information about settings file, check out
+https://docs...
+"""
+
 class Image:
     """
     Available images are stored here.
@@ -9,7 +17,7 @@ class Image:
 
 class Server:
     """
-    Available servers are stored here.
+    Available web servers are stored here.
     Example script: `settings.Server.django`"""
     
     django = 'django'

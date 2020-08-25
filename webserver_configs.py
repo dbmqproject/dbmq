@@ -1,6 +1,7 @@
 """
 DBMQ settings.
-For more information about this file, check out
+
+For more information about webserver_configs file, check out
 https://docs..
 """
 
