@@ -1,9 +1,10 @@
 {
     "LOCAL": {
-        "INSTALLED_PACKAGES": false,
+        "INSTALLED_PACKAGES": false
     },
     "SETTINGS": {
         "DOCKER_FILES_DIR": "./docker_files/",
-        "DOCKER_IMAGES_DIR": "./docker_images/"
+        "DOCKER_IMAGES_DIR": "./docker_images/",
+        "WEBSERVER_DIR": "./webserver_confgis.py"
     }
 }
