@@ -1,1 +1,1 @@
-This directory contains all sort of settings pre-build for web server configuration.
+This directory contains all sort of settings pre-build for web server configuration. Use these utilities by importing the modules on your web server configuration files.
