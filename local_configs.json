@@ -5,6 +5,6 @@
     "SETTINGS": {
         "DOCKER_FILES_DIR": "./docker_files/",
         "DOCKER_IMAGES_DIR": "./docker_images/",
-        "WEBSERVER_DIR": "./webserver_confgis.py"
+        "WEBSERVER_DIR": "./webserver.py"
     }
 }
