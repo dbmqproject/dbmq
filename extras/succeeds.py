@@ -6,8 +6,5 @@ https://docs...
 """
 from .textstyle import Alert, Style
 
-DOCKER_EXCEPTION = """
-%sDBMQ Connected to Docker!%s
-
-+ Client instance create.
-""" % (Alert.succeed, Style.clear)
+DOCKER_EXCEPTION = '%sDBMQ Connected to Docker!%s' % (
+    Alert.succeed, Style.clear)
