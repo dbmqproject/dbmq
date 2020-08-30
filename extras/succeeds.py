@@ -4,7 +4,10 @@ Succeed text handler.
 For more information about succeeds file, check out
 https://docs...
 """
-from .textstyle import Alert, Style
+from .textstyle import Succeed
 
-DOCKER_EXCEPTION = '%sDBMQ Connected to Docker!%s' % (
-    Alert.succeed, Style.clear)
+DOCKER_EXCEPTION = Succeed('DBMQ Connected to Docker!',
+                           [
+                               'Hello',
+                               'Bye'
+                           ]).text()
