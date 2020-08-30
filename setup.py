@@ -20,6 +20,6 @@ if __name__ == '__main__':
     try:
         client = docker.from_env()
         print(succeeds.DOCKER_EXCEPTION)
-        main(client, sys.argv)
+        main(client, sys.argv[1:])
     except docker.errors.DockerException:
         print(exceptions.DOCKER_EXCEPTION)
