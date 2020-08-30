@@ -38,3 +38,35 @@ class Alert:
 
     succeed = Color.green + Style.bold
     failed = Color.red + Style.bold
+
+
+class Failure:
+
+    def __init__(self, title, suggestions='', link=''):
+        self.title = title
+        self.suggestions = suggestions
+        self.link = link
+
+    def text(self):
+        context = '%s%s%s' % (Alert.failed, self.title, Style.clear)
+        for suggest in self.suggestions:
+            context += '\n~> %s' % suggest
+        if self.link:
+            context += '\n\n%sFor more information about this error, check out..%s\n%s' % (
+                Style.bold, Style.clear, self.link)
+
+        return context
+
+
+class Succeed:
+
+    def __init__(self, title, notes=''):
+        self.title = title
+        self.notes = notes
+
+    def text(self):
+        context = '%s%s%s' % (Alert.succeed, self.title, Style.clear)
+        for note in self.notes:
+            context += '\n~> %s' % note
+
+        return context
