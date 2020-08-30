@@ -6,8 +6,4 @@ https://docs...
 """
 from .textstyle import Succeed
 
-DOCKER_EXCEPTION = Succeed('DBMQ Connected to Docker!',
-                           [
-                               'Hello',
-                               'Bye'
-                           ]).text()
+DOCKER_EXCEPTION = Succeed('DBMQ Connected to Docker!').text()
