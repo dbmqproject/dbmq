@@ -13,7 +13,16 @@ from extras import exceptions, succeeds
 
 def main(client, args):
     # TODO: Manage args & start managing containers
-    pass
+    try:
+        client.images.build(
+            path='docker_files/centos/',
+            buildargs={'PROJECT_NAME': webserver.SERVER_CONFIGS['NAME']},
+            tag=webserver.SERVER_CONFIGS['CONTAINER']['NAME'],
+        )
+        print('Done.')
+    except Exception as e:
+        print('Something went wrong!')
+        print(e)
 
 
 if __name__ == '__main__':
