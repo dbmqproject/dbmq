@@ -10,7 +10,7 @@ from extras import settings
 # Your main server configurations will be stored here
 SERVER_CONFIGS = {
     'CONTAINER': {
-        'IMAGE': settings.Image.ubuntu,
+        'IMAGE': settings.Image.centos,
         'NAME': 'django_app',
     },
     'NAME': 'djangotest',
