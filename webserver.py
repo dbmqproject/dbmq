@@ -7,6 +7,7 @@ https://docs..
 
 from extras import settings
 
+# Your main server configurations will be stored here
 SERVER_CONFIGS = {
     'CONTAINER': {
         'IMAGE': settings.Image.ubuntu,
@@ -16,6 +17,7 @@ SERVER_CONFIGS = {
     'SERVER': settings.Server.django,
 }
 
+# Database configurations
 DATABASES = {
     'CONTAINER': {
         'NAME': 'django_db',
@@ -25,3 +27,5 @@ DATABASES = {
     'USERNAME': 'test',
     'PASSWORD': 'test123',
 }
+
+DBMQ_NETWORK = {}
