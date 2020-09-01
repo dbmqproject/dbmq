@@ -37,6 +37,11 @@ def main(client):
         print(exceptions.IMAGE_BUILT)
     except:
         print(exceptions.CONNECTION_REFUSED)
+        return
+
+    # TODO: Running the images (with exceptional conditions)
+    # TODO: Ending up the program "Press any key to exit.."-like
+    # TODO: ++ Adding cache-usage feature in webserver configs
 
 
 if __name__ == '__main__':
