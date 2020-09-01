@@ -50,9 +50,9 @@ class Failure:
     def text(self):
         context = '%s%s%s' % (Alert.failed, self.title, Style.clear)
         for suggest in self.suggestions:
-            context += '\n~> %s' % suggest
+            context += '\n- %s' % suggest
         if self.link:
-            context += '\n\n%sFor more information about this error, check out..%s\n%s' % (
+            context += '\n%sFor more information about this error, check out..%s\n%s' % (
                 Style.bold, Style.clear, self.link)
 
         return context
@@ -67,6 +67,6 @@ class Succeed:
     def text(self):
         context = '%s%s%s' % (Alert.succeed, self.title, Style.clear)
         for note in self.notes:
-            context += '\n~> %s' % note
+            context += '\n- %s' % note
 
         return context
