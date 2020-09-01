@@ -6,29 +6,43 @@ https://docs...
 """
 
 import docker
-import sys
 import webserver
-from extras import exceptions, succeeds
+import json
+from os import path
+from extras import exceptions
 
 
-def main(client, args):
-    # TODO: Manage args & start managing containers
+def main(client):
+    # TODO: Start managing containers
+
+    # Reading local_configs for the paths
+    with open('local_configs.json', 'r') as f:
+        configs = json.load(f)
+        beautified_configs = json.dumps(configs, sort_keys=True, indent=3)
+
+    # Main Docker configurations are stored in root_config
+    root_config = {
+        'path': path.join(configs['DOCKER_FILES_DIR'],
+                          webserver.SERVER_CONFIGS['CONTAINER']['IMAGE']),
+        'tag': webserver.SERVER_CONFIGS['CONTAINER']['NAME'],
+        'buildargs': {
+            'PROJECT_NAME': webserver.SERVER_CONFIGS['NAME'],
+        },
+    }
+    print(beautified_configs)
+
+    # Building process starts
     try:
-        client.images.build(
-            path='docker_files/centos/',
-            buildargs={'PROJECT_NAME': webserver.SERVER_CONFIGS['NAME']},
-            tag=webserver.SERVER_CONFIGS['CONTAINER']['NAME'],
-        )
-        print('Done.')
-    except Exception as e:
-        print('Something went wrong!')
-        print(e)
+        client.images.build(**root_config)
+        print(exceptions.IMAGE_BUILT)
+    except:
+        print(exceptions.CONNECTION_REFUSED)
 
 
 if __name__ == '__main__':
     try:
         client = docker.from_env()
-        print(succeeds.DOCKER_EXCEPTION)
-        main(client, sys.argv[1:])
+        print(exceptions.DOCKER_EXCEPTION_SUCCESS)
+        main(client)
     except docker.errors.DockerException:
-        print(exceptions.DOCKER_EXCEPTION)
+        print(exceptions.DOCKER_EXCEPTION_FAILED)
