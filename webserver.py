@@ -28,4 +28,5 @@ DATABASES = {
     'PASSWORD': 'test123',
 }
 
+# DBMQ network configurations
 DBMQ_NETWORK = {}
