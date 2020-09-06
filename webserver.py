@@ -12,6 +12,7 @@ SERVER_CONFIGS = {
     'CONTAINER': {
         'IMAGE': settings.Image.centos,
         'NAME': 'django_app',
+        'NOCACHE': False,
     },
     'NAME': 'djangotest',
     'SERVER': settings.Server.django,
