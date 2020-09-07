@@ -1,7 +1,7 @@
 <p align="center">
   <img src=".git_components/images/logo_land_tr.png" width="300"><br />
   Docker-based Message Queuing<br />
-  <a href="https://payping.ir/@lnxpy"><b>Buy Me Something with PayPing 😍</a> ― <a href="2">Read the Docs ➤</b></a><br />
+  <a href="https://docs...">Read the Docs here ➤</b></a><br />
   Create your dockerized Django project and start using MBs<br />
   
   <img src="https://img.shields.io/badge/build-in progress-blue">
@@ -11,3 +11,49 @@
   
   <img src=".git_components/images/objects/blueline.png" width="600">
 </p>
+
+### DBMQ
+Docker-based Message Queuing (DBMQ) is an efficient way to run the pre-built configurations on the building process of [Dockerfiles](https://docs.docker.com/engine/reference/builder/). Once you have finished configuring, you will be able to create your images based on your configurations. DBMQ is very flexible with [Django](djangoproject.com) projects and you might stay away from troubles with creating a Dockerized Django project. After the building process, your image will be ready to get started. Use a text editor to step through your container and make changes. (pre-installed editor is [Vim](https://www.vim.org/))
+
+### Installation
+Before you clone DBMQ, you need to make sure your Docker service is installed successfully. If there is something wrong, you can start browsing on the [Docker Installation Guide on Linux](https://runnable.com/docker/install-docker-on-linux). Make sure your Docker is running.
+
+```shell
+$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor p>
+     Active: active (running) since Mon 2020-09-07 23:47:00 +0430; 1s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 5644 (dockerd)
+      Tasks: 25 (limit: 4502)
+     Memory: 184.1M
+     CGroup: /system.slice/docker.service
+             ├─5644 /usr/bin/dockerd -H fd://
+             └─5652 containerd --config /var/run/docker/containerd/containerd.t>
+```
+Clone the repository with the following command.
+```shell
+$ git clone https://github.com/lnxpy/DBMQ.git
+...
+$ cd ./DBMQ
+```
+Either create a new virtualenv or, just keep installing the libraries on your real machine.
+
+- Using virtualenv
+```shell
+$ virtualenv .venv
+...
+$ source .venv/bin/activate
+(.venv)$ pip install -r requirements.txt
+```
+For more information about the venv installation, check out [virtualenv Installation](https://gist.github.com/Geoyi/d9fab4f609e9f75941946be45000632b).
+
+- Without virtualenv
+```shell
+$ pip3 install -r requirements.txt
+```
+Installation has been completed. For the further steps, check out the [documents](https://docs...).
+
+### License & Contribution
+DBMQ is licensed by [GPL-v3 (quick guide reference)](https://www.gnu.org/licenses/quick-guide-gplv3.html). This project is 100% open for any contribution purposes.
