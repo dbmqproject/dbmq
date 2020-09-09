@@ -16,7 +16,7 @@
 Docker-based Message Queuing (DBMQ) is an efficient way to run the pre-built configurations on the building process of [Dockerfiles](https://docs.docker.com/engine/reference/builder/). Once you have finished configuring, you will be able to create your images based on your configurations. DBMQ is very flexible with [Django](djangoproject.com) projects and you might stay away from troubles with creating a Dockerized Django project. After the building process, your image will be ready to get started. Use a text editor to step through your container and make changes. (pre-installed editor is [Vim](https://www.vim.org/))
 
 ### Installation
-Before you clone DBMQ, you better to make sure your Docker service is installed successfully. If there is something wrong, you can start browsing on the [Docker Installation Guide on Linux](https://runnable.com/docker/install-docker-on-linux). Make sure your Docker is running.
+Before you clone DBMQ, you better make sure your Docker service is installed successfully. If there is something wrong, you can start browsing on the [Docker Installation Guide on Linux](https://runnable.com/docker/install-docker-on-linux). Make sure your Docker is running.
 
 ```shell
 $ sudo systemctl status docker
