@@ -44,13 +44,13 @@ def main(client):
     print(beautified_process)
 
     # Building process starts
-    # try:
-    #    client.images.build(**root_configs)
-    #    print(exceptions.IMAGE_BUILT)
-    #    print(beautified_root_configs)
-    # except:
-    #    print(exceptions.CONNECTION_REFUSED)
-    #    return
+    try:
+        client.images.build(**root_configs)
+        print(exceptions.IMAGE_BUILT)
+        print(beautified_root_configs)
+    except:
+        print(exceptions.CONNECTION_REFUSED)
+        return
 
     # TODO: Ending up the program "Press any key to exit.."-like
     # TODO: Using process['data'] as the main reference instead of webserver configs (because of the conflicts
