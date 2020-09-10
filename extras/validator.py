@@ -5,12 +5,25 @@ For more information about validator file, check out
 https://docs...
 """
 
-# TODO: Reading from /webserver.py & start validating the data
+from pydantic import BaseModel, ValidationError
+from .textstyle import Failure
 
-"""
-First checking if all necessary fields are filled out.
-Then, start filling out optional fields.
 
-Finally, returning cleaned root_configs to the main source (setup.py) and
-continue processing.
-"""
+class Container(BaseModel):
+    IMAGE: str
+    NAME: str
+    NOCACHE: bool = False
+
+
+class ServerConfigs(BaseModel):
+    CONTAINER: Container
+    NAME: str
+    SERVER: str
+
+
+def ServerConfigsValidator(configs):
+    try:
+        data = ServerConfigs(**configs)
+        return {'status': True, 'data': data.json()}
+    except ValidationError as e:
+        return {'status': False, 'data': e}
