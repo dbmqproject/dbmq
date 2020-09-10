@@ -21,12 +21,7 @@ DOCKER_EXCEPTION_SUCCESS = Succeed('DBMQ Connected to Docker!',
                                        'Building your images based on following local configs...'
                                    ]).text()
 
-IMAGE_BUILT = Succeed('Your Core Image Built Successfully.',
-                      [
-                          'Your core webserver image has been created.',
-                          'All required packages are stored in your image.',
-                          'Your image is being runned in a minute..'
-                      ]).text()
+IMAGE_BUILT = Succeed('Your Core Image Built Successfully.').text()
 
 CONNECTION_REFUSED = Failure('The Connection Between DBMQ and Docker Server Refused!',
                              [
