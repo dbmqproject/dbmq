@@ -7,6 +7,7 @@ https://docs...
 
 from pydantic import BaseModel, ValidationError
 from .textstyle import Failure
+import json
 
 
 class Container(BaseModel):
@@ -24,6 +25,7 @@ class ServerConfigs(BaseModel):
 def ServerConfigsValidator(configs):
     try:
         data = ServerConfigs(**configs)
-        return {'status': True, 'data': data.json()}
+        data = json.loads(data.json())
+        return {'status': True, 'data': data}
     except ValidationError as e:
         return {'status': False, 'data': e}
