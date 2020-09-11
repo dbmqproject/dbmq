@@ -7,7 +7,7 @@ https://docs..
 
 from extras import settings
 
-# Your main server configurations will be stored here
+# Core configurations
 SERVER_CONFIGS = {
     'CONTAINER': {
         'IMAGE': settings.Image.centos,
