@@ -25,7 +25,8 @@ def main(client):
 
     if process['status']:
         main_data = process['data']
-        # Main Docker configurations are stored in root_config
+
+        # Main Docker configurations are stored in root_configs
         root_configs = {
             'path': path.join(configs['DOCKER_FILES_DIR'],
                               main_data['CONTAINER']['IMAGE']),
@@ -35,7 +36,8 @@ def main(client):
             },
             'nocache': main_data['CONTAINER']['NOCACHE'],
         }
-        beautified_root_configs = json.dumps(process, sort_keys=True, indent=3)
+        beautified_root_configs = json.dumps(
+            main_data, sort_keys=True, indent=3)
     else:
         print(process['data'])
         return
@@ -64,6 +66,8 @@ def build(root_configs):
 
     sys.stdout.write("]\n")  # this ends the progress bar
     print(exceptions.IMAGE_BUILT)
+
+    # TODO: Running the image with the run separated function
 
 
 if __name__ == '__main__':
