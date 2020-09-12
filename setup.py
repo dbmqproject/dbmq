@@ -50,22 +50,13 @@ def main(client):
 
 
 def build(root_configs):
-    toolbar_width = 30
-
-    # setup toolbar
-    sys.stdout.write("Building Your Core Image.. [%s]" % (" " * toolbar_width))
-    sys.stdout.flush()
-    # return to start of line, after '['
-    sys.stdout.write("\b" * (toolbar_width+1))
-
-    for i in range(toolbar_width):
+    print(exceptions.BUILDING_IMAGE)
+    try:
         client.images.build(**root_configs)
-        # update the bar
-        sys.stdout.write('-')
-        sys.stdout.flush()
-
-    sys.stdout.write("]\n")  # this ends the progress bar
-    print(exceptions.IMAGE_BUILT)
+        print(exceptions.IMAGE_BUILT)
+    except:
+        print(exceptions.CONNECTION_REFUSED)
+        return
 
     # TODO: Running the image with the run separated function
 
