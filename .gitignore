@@ -138,8 +138,5 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
-# Handmade ignore objects
-.local_webserver.py
-
 # End of https://www.toptal.com/developers/gitignore/api/python
 
