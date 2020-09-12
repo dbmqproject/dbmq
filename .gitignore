@@ -139,7 +139,7 @@ dmypy.json
 .pytype/
 
 # Handmade ignore objects
-webserver.py
+.local_webserver.py
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 
