@@ -11,10 +11,9 @@ from extras import settings
 SERVER_CONFIGS = {
     'CONTAINER': {
         'IMAGE': settings.Image.centos_8,
-        'NAME': 'mydjango',
-        'NOCACHE': True,
+        'NAME': 'core',
     },
-    'NAME': 'djangotest',
+    'NAME': 'sample',
     'SERVER': settings.Server.django,
 }
 
