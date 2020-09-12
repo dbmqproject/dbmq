@@ -7,20 +7,27 @@ https://docs..
 
 from extras import settings
 
+# Core configurations
 SERVER_CONFIGS = {
-    # Core configurations
+    'CONTAINER': {
+        'IMAGE': settings.Image.centos_8,
+        'NAME': 'mydjango',
+        'NOCACHE': True,
+    },
+    'NAME': 'djangotest',
+    'SERVER': settings.Server.django,
 }
 
+# Database configurations
 DATABASES = {
-    # Database configurations
+    'CONTAINER': {
+        'NAME': 'django_db',
+    },
+    'NAME': 'django',
+    'SERVER': settings.Database.postgres,
+    'USERNAME': 'test',
+    'PASSWORD': 'test123',
 }
 
-DBMQ_NETWORK = {
-    # DBMQ network configurations
-}
-
-# Importing all configurations from the local file
-try:
-    from .local_webserver import *
-except:
-    pass
+# DBMQ network configurations
+DBMQ_NETWORK = {}
