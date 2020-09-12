@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:centos8
 
 # Start django project
 # Configuration file exists at webserver.py
