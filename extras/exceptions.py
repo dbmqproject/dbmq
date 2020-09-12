@@ -31,5 +31,5 @@ CONNECTION_REFUSED = Failure('The Connection Between DBMQ and Docker Server Refu
 BUILDING_IMAGE = Notification([
     'Sending the arguments to Dockerfile..',
     'Environment variables are setting..',
-    'Building the core image and installing the packages.. (it might take a few minutes)',
+    'Building the core image and installing the packages.. (It might take a few minutes)',
 ]).text()
