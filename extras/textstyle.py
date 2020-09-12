@@ -42,7 +42,7 @@ class Alert:
 
 class Failure:
 
-    def __init__(self, title, suggestions='', link=''):
+    def __init__(self, title, suggestions=[], link=''):
         self.title = title
         self.suggestions = suggestions
         self.link = link
@@ -60,13 +60,25 @@ class Failure:
 
 class Succeed:
 
-    def __init__(self, title, notes=''):
+    def __init__(self, title, notes=[], prefix=''):
         self.title = title
         self.notes = notes
+        self.prefix = prefix
 
     def text(self):
         context = '%s%s%s' % (Alert.succeed, self.title, Style.clear)
         for note in self.notes:
-            context += '\n- %s' % note
+            context += '\n%s%s' % (self.prefix, note)
 
+        return context
+
+
+class Notification:
+
+    def __init__(self, notes=[]):
+        self.notes = notes
+
+    def text(self):
+        context = '\n'.join(
+            ['%s%s%s' % (Style.bold, i, Style.clear) for i in self.notes])
         return context
