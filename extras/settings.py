@@ -10,11 +10,10 @@ https://docs...
 class Image:
     """
     Available images are stored here.
-    Example script: `settings.Images.ubuntu`
+    Example script: `settings.Images.centos_8`
     """
 
-    ubuntu = 'ubuntu'
-    centos = 'centos'
+    centos_8 = 'centos_8'
 
 
 class Server:
@@ -23,7 +22,6 @@ class Server:
     Example script: `settings.Server.django`"""
 
     django = 'django'
-    flask = 'flask'
 
 
 class Database:
@@ -33,7 +31,6 @@ class Database:
     """
 
     postgres = 'postgres'
-    mysql = 'mysql'
 
 
 class Broker:
@@ -43,4 +40,3 @@ class Broker:
     """
 
     rabbitmq = 'rabbitmq'
-    redis = 'redis'
