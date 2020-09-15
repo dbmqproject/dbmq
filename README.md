@@ -35,22 +35,20 @@ TriggeredBy: ● docker.socket
              ├─5644 /usr/bin/dockerd -H fd://
              └─5652 containerd --config /var/run/docker/containerd/containerd.t>
 ```
-Clone the repository with the following command.
+Clone the repository with the following command and either create a new virtualenv or, just keep installing the libraries on your real machine.
 ```shell
 $ git clone https://github.com/lnxpy/DBMQ.git
 ...
 $ cd ./DBMQ
-```m
-Either create a new virtualenv or, just keep installing the libraries on your real machine.
+```
 
-- Using virtualenv
+- Using virtualenv (for more information about the venv installation, check out [virtualenv Installation](https://gist.github.com/Geoyi/d9fab4f609e9f75941946be45000632b))
 ```shell
 $ virtualenv .venv
 ...
 $ source .venv/bin/activate
 (.venv)$ pip install -r requirements.txt
 ```
-For more information about the venv installation, check out [virtualenv Installation](https://gist.github.com/Geoyi/d9fab4f609e9f75941946be45000632b).
 
 - Without virtualenv
 ```shell
