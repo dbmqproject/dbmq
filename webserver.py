@@ -11,7 +11,7 @@ from extras import settings
 SERVER_CONFIGS = {
     'CONTAINER': {
         'IMAGE': settings.Image.centos_8,
-        'NAME': 'core',
+        'NAME': 'django_core',
     },
     'NAME': 'sample',
     'SERVER': settings.Server.django,
@@ -21,9 +21,9 @@ SERVER_CONFIGS = {
 DATABASES = {
     'CONTAINER': {
         'NAME': 'django_db',
+        'SERVER': settings.Database.postgres,
     },
-    'NAME': 'django',
-    'SERVER': settings.Database.postgres,
+    'NAME': 'djangodb',
     'USERNAME': 'test',
     'PASSWORD': 'test123',
 }
