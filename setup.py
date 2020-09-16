@@ -64,15 +64,18 @@ def build(root_configs):
         running = client.containers.run(image=root_configs['tag'], detach=True)
         print(exceptions.CONTAINER_IS_RUNNING)
     except Exception as e:
-        print('Container could not be run..')
-        print(e)
+        print(exceptions.CONTAINER_FAILED_IN_RUNNING)
+        return
 
+    # TODO: Attributes filtering on the executed container
+    # TODO: Showing an inspect of the Core container
+
+    # Stream logging
     process = running.logs(follow=True, stream=True)
     for line in process:
         print(line.decode('UTF-8'), end='')
 
-    # TODO: Optimizing the running process
-    # TODO: Attributes filtering on the executed container
+    # TODO: Solving some conflicts on styling file
 
 
 if __name__ == '__main__':
