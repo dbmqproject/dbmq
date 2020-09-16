@@ -33,3 +33,10 @@ BUILDING_IMAGE = Notification([
     'Environment variables are setting..',
     'Building the core image and installing the packages.. (It might take a few minutes)',
 ]).text()
+
+RUNNING_CONTAINER = Notification([
+    'Running your containers..'
+]).text()
+
+CONTAINER_IS_RUNNING = Succeed(
+    'Core container is running in the background.').text()
