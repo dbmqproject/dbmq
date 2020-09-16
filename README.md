@@ -8,6 +8,7 @@
   <img src="https://img.shields.io/badge/base%20package-Docker SDK 4.3.1-blue?logo=docker">
   <img src="https://img.shields.io/github/license/lnxpy/DBMQ?color=blue&logo=gnu">
   <img src="https://img.shields.io/badge/webserver-Django-blue?logo=django"><br />
+  <img src="https://img.shields.io/badge/Documentation-Sphinx+recommonmark-blue"><br />
   
   <img src=".git_components/images/objects/blueline.png" width="600">
 </p>
