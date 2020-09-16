@@ -5,9 +5,9 @@
   Create your Dockerized Django project and start using MBs<br />
   
   <img src="https://img.shields.io/badge/build-in progress-blue">
-  <img src="https://img.shields.io/badge/base%20package-Docker4.3.1-blue?logo=docker">
+  <img src="https://img.shields.io/badge/base%20package-Docker SDK 4.3.1-blue?logo=docker">
   <img src="https://img.shields.io/github/license/lnxpy/DBMQ?color=blue&logo=gnu">
-  <img src="https://img.shields.io/badge/webserver-Django3.1-blue?logo=django"><br />
+  <img src="https://img.shields.io/badge/webserver-Django-blue?logo=django"><br />
   
   <img src=".git_components/images/objects/blueline.png" width="600">
 </p>
