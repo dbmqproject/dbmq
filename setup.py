@@ -58,7 +58,21 @@ def build(root_configs):
         print(exceptions.CONNECTION_REFUSED)
         return
 
-    # TODO: Running the image with the run separated function
+    # Running process starts
+    try:
+        print(exceptions.RUNNING_CONTAINER)
+        running = client.containers.run(image=root_configs['tag'], detach=True)
+        print(exceptions.CONTAINER_IS_RUNNING)
+    except Exception as e:
+        print('Container could not be run..')
+        print(e)
+
+    process = running.logs(follow=True, stream=True)
+    for line in process:
+        print(line.decode('UTF-8'), end='')
+
+    # TODO: Optimizing the running process
+    # TODO: Attributes filtering on the executed container
 
 
 if __name__ == '__main__':
