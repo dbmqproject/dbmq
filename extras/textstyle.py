@@ -42,15 +42,17 @@ class Alert:
 
 class Failure:
 
-    def __init__(self, title, suggestions=[], link=''):
+    def __init__(self, title, suggestions=[], link='', prefix=''):
         self.title = title
         self.suggestions = suggestions
         self.link = link
+        self.prefix = prefix
 
     def text(self):
         context = '%s%s%s' % (Alert.failed, self.title, Style.clear)
         for suggest in self.suggestions:
-            context += '\n- %s' % suggest
+            context += '\n%s%s%s%s' % (self.prefix,
+                                       Style.bold, suggest, Style.clear)
         if self.link:
             context += '\n%sFor more information about this error, check out..%s\n%s' % (
                 Style.bold, Style.clear, self.link)
@@ -66,19 +68,22 @@ class Succeed:
         self.prefix = prefix
 
     def text(self):
-        context = '%s%s%s' % (Alert.succeed, self.title, Style.clear)
+        context = '%s%s%s' % (
+            Alert.succeed, self.title, Style.clear)
         for note in self.notes:
-            context += '\n%s%s' % (self.prefix, note)
+            context += '\n%s%s%s%s' % (self.prefix,
+                                       Style.bold, note, Style.clear)
 
         return context
 
 
 class Notification:
 
-    def __init__(self, notes=[]):
+    def __init__(self, notes=[], prefix=''):
         self.notes = notes
+        self.prefix = prefix
 
     def text(self):
         context = '\n'.join(
-            ['%s%s%s' % (Style.bold, i, Style.clear) for i in self.notes])
+            ['%s%s%s%s' % (self.prefix, Style.bold, i, Style.clear) for i in self.notes])
         return context
