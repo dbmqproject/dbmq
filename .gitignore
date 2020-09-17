@@ -139,4 +139,7 @@ dmypy.json
 .pytype/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+# Handmade ignores starts from here
 
+# developement container extension
+.devcontainer
