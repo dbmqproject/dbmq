@@ -10,6 +10,7 @@ from .textstyle import Failure
 import json
 
 
+# pydantic base models
 class Container(BaseModel):
     IMAGE: str
     NAME: str
@@ -22,6 +23,7 @@ class ServerConfigs(BaseModel):
     SERVER: str
 
 
+# validators based on pydantic base models
 def ServerConfigsValidator(configs):
     try:
         data = ServerConfigs(**configs)
