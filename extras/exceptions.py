@@ -42,9 +42,9 @@ BUILDING_IMAGE = Notification(
     ]
 ).text()
 
-RUNNING_CONTAINER = Notification(
+RUNNING_CORE_CONTAINER = Notification(
     [
-        'Running your containers..'
+        'Running your core container..'
     ]
 ).text()
 
@@ -57,5 +57,20 @@ CONTAINER_FAILED_IN_RUNNING = Failure(
     [
         'Make sure if there is any conflict with tags and solve them.',
         'Check your Docker stability.'
+    ]
+).text()
+
+STREAM_LOGGING_STARTED = Notification(
+    [
+        'Stream logger is processing the console..',
+    ]
+).text()
+
+EXIT_INTERRUPT = Failure(
+    'This session is about to die.',
+    [
+        'Core container is still running.',
+        'All other services are still available.',
+        'View logs and keep developing on your containers manually.'
     ]
 ).text()
