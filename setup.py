@@ -10,7 +10,7 @@ import webserver
 import json
 import sys
 from os import path
-from extras import exceptions
+from extras import exceptions, flow
 from extras.validator import ServerConfigsValidator
 
 
@@ -59,23 +59,31 @@ def build(root_configs):
         return
 
     # Running process starts
+    run(root_configs['tag'])
+
+
+def run(tag):
     try:
-        print(exceptions.RUNNING_CONTAINER)
-        running = client.containers.run(image=root_configs['tag'], detach=True)
+        print(exceptions.RUNNING_CORE_CONTAINER)
+        running = client.containers.run(image=tag, detach=True)
         print(exceptions.CONTAINER_IS_RUNNING)
-    except Exception as e:
+    except:
         print(exceptions.CONTAINER_FAILED_IN_RUNNING)
         return
 
-    # TODO: Attributes filtering on the executed container
-    # TODO: Showing an inspect of the Core container
+    container = client.containers.get(running.name)
+    basic_configs = flow.ContainerConfigs(container.attrs)
+    print(basic_configs)
+    print(exceptions.STREAM_LOGGING_STARTED)
 
     # Stream logging
     process = running.logs(follow=True, stream=True)
-    for line in process:
-        print(line.decode('UTF-8'), end='')
 
-    # TODO: Solving some conflicts on styling file
+    try:
+        for line in process:
+            print(line.decode('UTF-8'), end='')
+    except KeyboardInterrupt:
+        print(exceptions.EXIT_INTERRUPT)
 
 
 if __name__ == '__main__':
