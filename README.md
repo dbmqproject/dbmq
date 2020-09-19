@@ -1,7 +1,7 @@
 <p align="center">
   <img src=".git_components/images/logo_land_tr.png" width="300"><br />
   Docker-based Message Queuing<br />
-  <a href="https://docker-py.readthedocs.io">Docker SDK</b></a> ··· <a href="https://docs...">Read the Docs here ➤</b></a><br />
+  <a href="https://docker-py.readthedocs.io">Docker SDK</b></a> - <a href="https://docs...">Read the Docs here ➤</b></a><br />
   Create your Dockerized Django project and start using MBs<br />
   
   <img src="https://img.shields.io/badge/build-in progress-blue">
