@@ -19,5 +19,4 @@ def ContainerConfigs(configs):
     data = json.dumps(data, indent=3,
                       separators=('', '\t->\t'))
 
-    # TODO: Using Graphene in order to filter the JSON inspect
     return data
