@@ -30,7 +30,8 @@ CONNECTION_REFUSED = Failure(
     'The Connection Between DBMQ and Docker Server Refused!',
     [
         'Please check your connection and try again.',
-        'Boot up the Docker service with no latency or duration.'
+        'Boot up the Docker service with no latency or duration.',
+        'Make sure you have stored your images and Dockerfiles on DOCKER_FILES_DIR',
     ], 'https://docs...'
 ).text()
 
