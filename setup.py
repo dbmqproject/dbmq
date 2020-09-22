@@ -8,13 +8,13 @@ https://docs...
 import docker
 import webserver
 import json
-import sys
+import logging
 from os import path
 from extras import exceptions, flow
 from extras.validator import ServerConfigsValidator
 
 
-def main(client):
+def main():
     # Reading local_configs for the paths
     with open('workdir.json', 'r') as f:
         configs = json.load(f)
@@ -90,6 +90,6 @@ if __name__ == '__main__':
     try:
         client = docker.from_env()
         print(exceptions.DOCKER_EXCEPTION_SUCCESS)
-        main(client)
+        main()
     except docker.errors.DockerException:
         print(exceptions.DOCKER_EXCEPTION_FAILED)
