@@ -40,7 +40,7 @@ def main():
             main_data, sort_keys=True, indent=3)
     else:
         print(process['data'])
-        return
+        raise SystemExit
 
     print(beautified_configs)
     print(beautified_root_configs)
@@ -56,7 +56,7 @@ def build(root_configs):
         print(exceptions.IMAGE_BUILT)
     except:
         print(exceptions.CONNECTION_REFUSED)
-        return
+        raise SystemExit
 
     # Running process starts
     run(root_configs['tag'])
@@ -69,7 +69,7 @@ def run(tag):
         print(exceptions.CONTAINER_IS_RUNNING)
     except:
         print(exceptions.CONTAINER_FAILED_IN_RUNNING)
-        return
+        raise SystemExit
 
     container = client.containers.get(running.name)
     basic_configs = flow.ContainerConfigs(container.attrs)
@@ -84,6 +84,7 @@ def run(tag):
             print(line.decode('UTF-8'), end='')
     except KeyboardInterrupt:
         print(exceptions.EXIT_INTERRUPT)
+        raise SystemExit
 
 
 if __name__ == '__main__':
@@ -93,3 +94,4 @@ if __name__ == '__main__':
         main()
     except docker.errors.DockerException:
         print(exceptions.DOCKER_EXCEPTION_FAILED)
+        raise SystemExit
