@@ -57,5 +57,12 @@ $ pip3 install -r requirements.txt
 ```
 Installation has been completed. For the further steps, check out the [documents](https://docs...).
 
+### To-Do
+The following to-do task list should be followed in order. If you are experienced enough in these tasks, you can start contributing to DBMQ. Fork the project, create PRs and I'll review them. :whale:
+- [ ] Using `logging` module instead of nested print commands.
+- [ ] Using a customizable `.conf` file for the logger pre-configurations.
+- [ ] Database implementation process.
+- [ ] Broker implementation process.
+
 ### License & Contribution
-DBMQ is licensed by [GPL-v3 (quick guide reference)](https://www.gnu.org/licenses/quick-guide-gplv3.html). This project is 100% open for any contribution purposes.
+DBMQ is licensed by [GPL-v3 (quick guide reference)](./LICENSE). This project is 100% open for any contribution purposes.
