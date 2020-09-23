@@ -61,6 +61,8 @@ Installation has been completed. For the further steps, check out the [documents
 The following to-do task list should be followed in order. If you are experienced enough in these tasks, you can start contributing to DBMQ. Fork the project, create PRs and I'll review them. :whale:
 - [ ] Using `logging` module instead of nested print commands.
 - [ ] Using a customizable `.conf` file for the logger pre-configurations.
+- [ ] Writing an article about v2.1 on [Medium](https://medium.com/@lnxpy).
+- [ ] Start writing documentations (Sphinx+recommonmark).
 - [ ] Database implementation process.
 - [ ] Broker implementation process.
 
