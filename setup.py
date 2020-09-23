@@ -10,6 +10,7 @@ import webserver
 import json
 import logging
 from os import path
+from requests.exceptions import (ConnectionError, )
 from extras import exceptions, flow
 from extras.validator import ServerConfigsValidator
 
@@ -54,7 +55,7 @@ def build(root_configs):
     try:
         client.images.build(**root_configs)
         print(exceptions.IMAGE_BUILT)
-    except:
+    except ConnectionError:
         print(exceptions.CONNECTION_REFUSED)
         raise SystemExit
 
@@ -67,7 +68,7 @@ def run(tag):
         print(exceptions.RUNNING_CORE_CONTAINER)
         running = client.containers.run(image=tag, detach=True)
         print(exceptions.CONTAINER_IS_RUNNING)
-    except:
+    except ConnectionError:
         print(exceptions.CONTAINER_FAILED_IN_RUNNING)
         raise SystemExit
 
