@@ -4,8 +4,7 @@ Exception text handler.
 For more information about exceptions file, check out
 https://docs...
 """
-from .textstyle import Failure, Succeed, Notification
-
+from .textstyle import Failure, Notification, Succeed
 
 DOCKER_EXCEPTION_FAILED = Failure(
     'DBMQ Could Not Connect to Docker!',

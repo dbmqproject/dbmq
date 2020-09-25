@@ -5,9 +5,11 @@ For more information about validator file, check out
 https://docs...
 """
 
-from pydantic import BaseModel, ValidationError
-from .textstyle import Failure
 import json
+
+from pydantic import BaseModel, ValidationError
+
+from .textstyle import Failure
 
 
 # pydantic base models

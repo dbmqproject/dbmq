@@ -5,12 +5,14 @@ For more information about setup file, check out
 https://docs...
 """
 
-import docker
-import webserver
 import json
 import logging
 from os import path
-from requests.exceptions import (ConnectionError, )
+
+import docker
+from requests.exceptions import ConnectionError
+
+import webserver
 from extras import exceptions, flow
 from extras.validator import ServerConfigsValidator
 
