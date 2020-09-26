@@ -62,7 +62,7 @@ The following to-do task list should be followed in order. If you are experience
 - [x] `isort` module used in the importing head section of files.
 - [ ] Using `logging` module instead of nested print commands.
 - [ ] Using a customizable `.conf` file for the logger pre-configurations.
-- [ ] Writing an article about v2.1 on [Medium](https://medium.com/@lnxpy).
+- [ ] Writing an article about the latest stable version on [Medium](https://medium.com/@lnxpy).
 - [ ] Start writing documentations (Sphinx+recommonmark).
 - [ ] Database implementation process.
 - [ ] Broker implementation process.
