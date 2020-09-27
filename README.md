@@ -58,7 +58,7 @@ $ pip3 install -r requirements.txt
 Installation has been completed. For the further steps, check out the [documents](https://docs...).
 
 ### To-Do
-The following to-do task list should be followed in order. If you are experienced enough in these tasks, you can start contributing to DBMQ. Fork the project, create PRs and I'll review them. :whale:
+The following to-do task list should be followed in order. If you are experienced enough in these tasks, you can start contributing to DBMQ. Fork the project, create PRs and I'll review them. :whale: :whale2:
 - [x] `isort` module used in the importing head section of files.
 - [ ] Using `logging` module instead of nested print commands.
 - [ ] Using a customizable `.conf` file for the logger pre-configurations.
