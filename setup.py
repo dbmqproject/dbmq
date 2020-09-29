@@ -60,6 +60,9 @@ def build(root_configs):
     except ConnectionError:
         print(exceptions.CONNECTION_REFUSED)
         raise SystemExit
+    else:
+        print(exceptions.SOMETHING_IS_WRONG % 'Building')
+        raise SystemExit
 
     # Running process starts
     run(root_configs['tag'])
@@ -72,6 +75,9 @@ def run(tag):
         print(exceptions.CONTAINER_IS_RUNNING)
     except ConnectionError:
         print(exceptions.CONTAINER_FAILED_IN_RUNNING)
+        raise SystemExit
+    else:
+        print(exceptions.SOMETHING_IS_WRONG % 'Running')
         raise SystemExit
 
     container = client.containers.get(running.name)
@@ -87,6 +93,9 @@ def run(tag):
             print(line.decode('UTF-8'), end='')
     except KeyboardInterrupt:
         print(exceptions.EXIT_INTERRUPT)
+        raise SystemExit
+    else:
+        print(exceptions.SOMETHING_IS_WRONG % 'Stream Logging')
         raise SystemExit
 
 
