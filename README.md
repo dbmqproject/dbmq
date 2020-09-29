@@ -60,7 +60,7 @@ Installation has been completed. For the further steps, check out the [documents
 ### To-Do
 The following to-do task list should be followed in order. If you are experienced enough in these tasks, you can start contributing to DBMQ. Fork the project, create PRs and I'll review them. If you've done any further task, change your task context grammatically in the following list.
 
-- [x] `else` command observed in the try-catching processes.
+- [x] `except` command observed in the try-catching processes. (When any other exception raised)
 - [x] `isort` module used in the importing head section of files.
 - [ ] Using `logging` module instead of nested print commands.
 - [ ] Using a customizable `.conf` file for the logger pre-configurations.
