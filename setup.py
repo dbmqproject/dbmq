@@ -60,7 +60,7 @@ def build(root_configs):
     except ConnectionError:
         print(exceptions.CONNECTION_REFUSED)
         raise SystemExit
-    else:
+    except:
         print(exceptions.SOMETHING_IS_WRONG % 'Building')
         raise SystemExit
 
@@ -76,7 +76,7 @@ def run(tag):
     except ConnectionError:
         print(exceptions.CONTAINER_FAILED_IN_RUNNING)
         raise SystemExit
-    else:
+    except:
         print(exceptions.SOMETHING_IS_WRONG % 'Running')
         raise SystemExit
 
@@ -94,7 +94,7 @@ def run(tag):
     except KeyboardInterrupt:
         print(exceptions.EXIT_INTERRUPT)
         raise SystemExit
-    else:
+    except:
         print(exceptions.SOMETHING_IS_WRONG % 'Stream Logging')
         raise SystemExit
 
