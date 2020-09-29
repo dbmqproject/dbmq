@@ -23,7 +23,7 @@ DOCKER_EXCEPTION_SUCCESS = Succeed(
     ]
 ).text()
 
-IMAGE_BUILT = Succeed('Core image has been built successfully.').text()
+IMAGE_BUILT = Succeed('Core Image Has Been Built Successfully.').text()
 
 CONNECTION_REFUSED = Failure(
     'The Connection Between DBMQ and Docker Server Refused!',
@@ -49,7 +49,7 @@ RUNNING_CORE_CONTAINER = Notification(
 ).text()
 
 CONTAINER_IS_RUNNING = Succeed(
-    'Core container is running in the background.'
+    'Core Container is Running in the Background.'
 ).text()
 
 CONTAINER_FAILED_IN_RUNNING = Failure(
@@ -67,10 +67,14 @@ STREAM_LOGGING_STARTED = Notification(
 ).text()
 
 EXIT_INTERRUPT = Failure(
-    'This session is about to die.',
+    'This Session is About to Die.',
     [
         'Core container is still running.',
         'All other services are still available.',
         'View logs and keep developing on your containers manually.'
     ]
+).text()
+
+SOMETHING_IS_WRONG = Failure(
+    'Something Went Wrong in the %s Process.'
 ).text()
