@@ -10,7 +10,7 @@ import logging
 from os import path
 
 import docker
-from requests.exceptions import ConnectionError
+from requests.exceptions import (ConnectionError,)
 
 import webserver
 from extras import exceptions, flow
