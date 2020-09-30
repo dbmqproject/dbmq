@@ -1,5 +1,5 @@
 {
     "DOCKER_FILES_DIR": "./docker_files/",
     "DOCKER_IMAGES_DIR": "./docker_images/",
-    "LOG_DIR": "./log/"
+    "LOGS_DIR": "./logs/"
 }
