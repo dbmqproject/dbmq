@@ -14,6 +14,7 @@ class Image:
     """
 
     centos_8 = 'centos_8'
+    debian_10_05 = 'debian_10.05'
 
 
 class Server:
