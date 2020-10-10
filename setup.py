@@ -15,6 +15,7 @@ from requests.exceptions import (ConnectionError,)
 import webserver
 from extras import exceptions, flow
 from extras.validator import ServerConfigsValidator
+from logs.handlers import logger_handler
 
 
 def main():
