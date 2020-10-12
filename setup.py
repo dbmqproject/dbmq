@@ -7,6 +7,7 @@ https://docs...
 
 import json
 import logging
+import pathlib
 from os import path
 
 import docker
@@ -15,7 +16,7 @@ from requests.exceptions import (ConnectionError,)
 import webserver
 from extras import exceptions, flow
 from extras.validator import ServerConfigsValidator
-from logs.handlers import logger_handler
+from logs.handlers import create_logger
 
 
 def main():
@@ -99,12 +100,18 @@ def run(tag):
         print(exceptions.SOMETHING_IS_WRONG % 'Stream Logging')
         raise SystemExit
 
+        # TODO: creating a function that logs single line but prints multiple lines
+        #       from extras.textstyle
+
 
 if __name__ == '__main__':
+    BASE_DIR = pathlib.Path().absolute()
+    logger = create_logger(BASE_DIR)
+
     try:
         client = docker.from_env()
-        print(exceptions.DOCKER_EXCEPTION_SUCCESS)
+        logger.info(exceptions.DOCKER_EXCEPTION_SUCCESS)
         main()
     except docker.errors.DockerException:
-        print(exceptions.DOCKER_EXCEPTION_FAILED)
+        logger.error(exceptions.DOCKER_EXCEPTION_FAILED)
         raise SystemExit
