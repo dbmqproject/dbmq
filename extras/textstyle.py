@@ -59,6 +59,9 @@ class Failure:
 
         return context
 
+    def title(self):
+        return self.title
+
 
 class Succeed:
 
@@ -76,14 +79,14 @@ class Succeed:
 
         return context
 
+    def title(self):
+        return self.title
+
 
 class Notification:
 
-    def __init__(self, notes=[], prefix=''):
-        self.notes = notes
-        self.prefix = prefix
+    def __init__(self, title):
+        self.title = title
 
     def text(self):
-        context = '\n'.join(
-            ['%s%s%s%s' % (self.prefix, Style.bold, i, Style.clear) for i in self.notes])
-        return context
+        return '%s%s%s' % (Style.bold, self.title, Style.clear)
