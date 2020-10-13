@@ -7,7 +7,6 @@ https://docs...
 
 import logging
 import logging.config
-import pathlib
 
 
 def create_logger(base):
