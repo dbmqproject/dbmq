@@ -6,17 +6,19 @@ https://docs...
 """
 
 import json
-import logging
-import pathlib
 from os import path
 
 import docker
 from requests.exceptions import (ConnectionError,)
+from logs.handlers import create_logger
+import pathlib
+from logging import (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+
 
 import webserver
 from extras import exceptions, flow
 from extras.validator import ServerConfigsValidator
-from logs.handlers import create_logger
+from logs.logger import logging
 
 
 def main():
@@ -44,7 +46,7 @@ def main():
         beautified_root_configs = json.dumps(
             main_data, sort_keys=True, indent=3)
     else:
-        print(process['data'])
+        logging(logger, ERROR, process['data'])
         raise SystemExit
 
     print(beautified_configs)
@@ -55,15 +57,15 @@ def main():
 
 
 def build(root_configs):
-    print(exceptions.BUILDING_IMAGE)
+    logging(logger, INFO, exceptions.BUILDING_IMAGE)
     try:
         client.images.build(**root_configs)
-        print(exceptions.IMAGE_BUILT)
+        logging(logger, INFO, exceptions.IMAGE_BUILT)
     except ConnectionError:
-        print(exceptions.CONNECTION_REFUSED)
+        logging(logger, ERROR, exceptions.CONNECTION_REFUSED)
         raise SystemExit
     except:
-        print(exceptions.SOMETHING_IS_WRONG % 'Building')
+        logging(logger, ERROR, exceptions.SOMETHING_IS_WRONG, siw='Building')
         raise SystemExit
 
     # Running process starts
@@ -72,20 +74,20 @@ def build(root_configs):
 
 def run(tag):
     try:
-        print(exceptions.RUNNING_CORE_CONTAINER)
+        logging(logger, INFO, exceptions.RUNNING_CORE_CONTAINER)
         running = client.containers.run(image=tag, detach=True)
-        print(exceptions.CONTAINER_IS_RUNNING)
+        logging(logger, INFO, exceptions.CONTAINER_IS_RUNNING)
     except ConnectionError:
-        print(exceptions.CONTAINER_FAILED_IN_RUNNING)
+        logging(logger, ERROR, exceptions.CONTAINER_FAILED_IN_RUNNING)
         raise SystemExit
     except:
-        print(exceptions.SOMETHING_IS_WRONG % 'Running')
+        logging(logger, ERROR, exceptions.SOMETHING_IS_WRONG % 'Running')
         raise SystemExit
 
     container = client.containers.get(running.name)
     basic_configs = flow.ContainerConfigs(container.attrs)
     print(basic_configs)
-    print(exceptions.STREAM_LOGGING_STARTED)
+    logging(logger, INFO, exceptions.STREAM_LOGGING_STARTED)
 
     # Stream logging
     process = running.logs(follow=True, stream=True)
@@ -94,14 +96,12 @@ def run(tag):
         for line in process:
             print(line.decode('UTF-8'), end='')
     except KeyboardInterrupt:
-        print(exceptions.EXIT_INTERRUPT)
+        logging(logger, INFO, exceptions.EXIT_INTERRUPT)
         raise SystemExit
     except:
-        print(exceptions.SOMETHING_IS_WRONG % 'Stream Logging')
+        logging(logger, ERROR, exceptions.SOMETHING_IS_WRONG %
+                'Stream Logging')
         raise SystemExit
-
-        # TODO: creating a function that logs single line but prints multiple lines
-        #       from extras.textstyle
 
 
 if __name__ == '__main__':
@@ -110,8 +110,8 @@ if __name__ == '__main__':
 
     try:
         client = docker.from_env()
-        logger.info(exceptions.DOCKER_EXCEPTION_SUCCESS)
+        logging(logger, INFO, exceptions.DOCKER_EXCEPTION_SUCCESS)
         main()
     except docker.errors.DockerException:
-        logger.error(exceptions.DOCKER_EXCEPTION_FAILED)
+        logging(logger, ERROR, exceptions.DOCKER_EXCEPTION_FAILED)
         raise SystemExit
