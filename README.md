@@ -66,7 +66,7 @@ The following to-do task list should be followed in order. If you are experience
 - [x] Using a customizable `.conf` file for the logger pre-configurations.
 - [x] Writing an article about the latest stable version on [Medium](https://medium.com/@lnxpy/sample-project-in-dbmq-v2-1-d4f8cb41108c).
 - [ ] Start writing documentations (Sphinx+recommonmark).
-- [ ] v2.2 release is up
+- [ ] **v2.2 release is up.**
 - [ ] Database implementation process.
 - [ ] Broker implementation process.
 
