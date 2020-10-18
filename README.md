@@ -62,10 +62,11 @@ The following to-do task list should be followed in order. If you are experience
 
 - [x] `except` command observed in the try-catching processes. (When any other exception raised)
 - [x] `isort` module used in the importing head section of files.
-- [ ] Using `logging` module instead of nested print commands.
-- [ ] Using a customizable `.conf` file for the logger pre-configurations.
+- [x] Using `logging` module instead of nested print commands.
+- [x] Using a customizable `.conf` file for the logger pre-configurations.
 - [x] Writing an article about the latest stable version on [Medium](https://medium.com/@lnxpy/sample-project-in-dbmq-v2-1-d4f8cb41108c).
 - [ ] Start writing documentations (Sphinx+recommonmark).
+- [ ] v2.2 release is up
 - [ ] Database implementation process.
 - [ ] Broker implementation process.
 
