@@ -65,8 +65,8 @@ The following to-do task list should be followed in order. If you are experience
 - [x] Using `logging` module instead of nested print commands.
 - [x] Using a customizable `.conf` file for the logger pre-configurations.
 - [x] Writing an article about the latest stable version on [Medium](https://medium.com/@lnxpy/sample-project-in-dbmq-v2-1-d4f8cb41108c).
-- [ ] Start writing documentations (Sphinx+recommonmark).
 - [ ] **v2.2 release is up.**
+- [ ] Start writing documentations (Sphinx+recommonmark).
 - [ ] Database implementation process.
 - [ ] Broker implementation process.
 
