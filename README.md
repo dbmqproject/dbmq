@@ -60,7 +60,7 @@ Installation has been completed. For the further steps, check out the [documents
 ### To-Do
 The following to-do task list should be followed in order. If you are experienced enough in these tasks, you can start contributing to DBMQ. Fork the project, create PRs and I'll review them. If you've done any further task, change your task context grammatically in the following list.
 
-- [x] **v2.2 release is up**
+- [x] **version 2.1 is being released**
 - [x] `Docker_images` removed from the whole project
 - [ ] Using python docker images instead of linux distros
 - [ ] New feature -> streaming the running containers
@@ -68,6 +68,7 @@ The following to-do task list should be followed in order. If you are experience
 - [ ] Updating the links in the exceptions and repo 
 - [ ] Database implementation process
 - [ ] Broker implementation process
+- [ ] **version 2.2 is being released**
 
 ### License & Contribution
 DBMQ is licensed by [GPL-v3 (quick guide reference)](./LICENSE). This project is 100% open for any contribution purposes.
