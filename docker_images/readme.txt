@@ -1,1 +1,0 @@
-DBMQ uses base images for users who are banned or restricted from Docker.com. Most often it's centos:latest or debian:latest because of their weightlessly.
