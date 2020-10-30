@@ -71,4 +71,4 @@ The following to-do task list should be followed in order. If you are experience
 - [ ] **version 2.2 is being released**
 
 ### License & Contribution
-DBMQ is licensed by [GPL-v3 (quick guide reference)](./LICENSE). This project is 100% open for any contribution purposes.
+DBMQ is licensed by [GPL-v3 (quick guide reference)](./LICENSE).
