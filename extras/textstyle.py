@@ -42,9 +42,9 @@ class Alert:
 
 class Failure:
 
-    def __init__(self, title, suggestions=[], link='', prefix=''):
+    def __init__(self, title, suggestions=None, link='', prefix=''):
         self.title = title
-        self.suggestions = suggestions
+        self.suggestions = [] if suggestions is None else None
         self.link = link
         self.prefix = prefix
 
@@ -59,28 +59,23 @@ class Failure:
 
         return context
 
-    def title(self):
-        return self.title
-
 
 class Succeed:
 
-    def __init__(self, title, notes=[], prefix=''):
+    def __init__(self, title, notes=None, prefix=''):
         self.title = title
-        self.notes = notes
+        self.notes = [] if notes is None else None
         self.prefix = prefix
 
     def text(self):
         context = '%s%s%s' % (
             Alert.succeed, self.title, Style.clear)
-        for note in self.notes:
-            context += '\n%s%s%s%s' % (self.prefix,
-                                       Style.bold, note, Style.clear)
+        if self.notes is not None:
+            for note in self.notes:
+                context += '\n%s%s%s%s' % (self.prefix,
+                                           Style.bold, note, Style.clear)
 
         return context
-
-    def title(self):
-        return self.title
 
 
 class Notification:
