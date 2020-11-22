@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".git_components/images/logo_land_tr.png" width="300"><br />
+  <img src=".git_components/images/logo.png" width="130"><br />
   Docker-based Message Queuing<br />
   <a href="https://docker-py.readthedocs.io">Docker SDK</a> - <a href="https://medium.com/@lnxpy/sample-project-in-dbmq-v2-1-d4f8cb41108c">Article on Medium</a> - <a href="https://docs...">Read the Docs here ➤</a><br />
   Create your Dockerized Django project and start using MBs<br />
@@ -62,6 +62,7 @@ The following to-do task list should be followed in order. If you are experience
 
 - [x] **version 2.1 is being released**
 - [x] `Docker_images` removed from the whole project
+- [x] New logo represented for DBMQ v2.1
 - [ ] Using python docker images instead of linux distros
 - [ ] New feature -> streaming the running containers
 - [ ] Start writing documentations (Sphinx+recommonmark)
