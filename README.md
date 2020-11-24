@@ -4,7 +4,6 @@
   <a href="https://docker-py.readthedocs.io">Docker SDK</a> - <a href="https://medium.com/@lnxpy/sample-project-in-dbmq-v2-1-d4f8cb41108c">Article on Medium</a> - <a href="https://dbmq.readthedocs.io">Read the Docs here ➤</a><br />
   Create your Dockerized Django project and start using MBs<br />
   
-  <img src="https://img.shields.io/badge/build-in progress-blue">
   <img src="https://img.shields.io/badge/base%20package-Docker SDK 4.3.1-blue?logo=docker">
   <img src="https://img.shields.io/github/license/lnxpy/DBMQ?color=blue&logo=gnu">
   <img src="https://img.shields.io/badge/webserver-Django-blue?logo=django"><br />
