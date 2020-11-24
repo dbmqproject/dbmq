@@ -11,10 +11,14 @@ docker==4.3.1
 docutils==0.16
 idna==2.10
 imagesize==1.2.0
+ipykernel==5.3.4
+ipython==7.18.1
 ipython-genutils==0.2.0
 isort==5.4.2
 jedi==0.17.2
 Jinja2==2.11.2
+jupyter-client==6.1.7
+jupyter-core==4.6.3
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
@@ -29,8 +33,9 @@ pydantic==1.6.1
 Pygments==2.6.1
 pylint==2.6.0
 pyparsing==2.4.7
+python-dateutil==2.8.1
 pytz==2020.1
-recommonmark==0.6.0
+pyzmq==19.0.2
 requests==2.24.0
 rstcheck==3.3.1
 six==1.15.0
@@ -44,6 +49,7 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.4
 toml==0.10.1
+tornado==6.0.4
 traitlets==5.0.4
 urllib3==1.25.10
 wcwidth==0.2.5
