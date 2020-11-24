@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/base%20package-Docker SDK 4.3.1-blue?logo=docker">
   <img src="https://img.shields.io/github/license/lnxpy/DBMQ?color=blue&logo=gnu">
   <img src="https://img.shields.io/badge/webserver-Django-blue?logo=django"><br />
-  <img src="https://img.shields.io/badge/Documentation-Sphinx+recommonmark-blue"><br />
+  <img src="https://img.shields.io/badge/Documentation-Sphinx-blue"><br />
   
   <img src=".git_components/images/objects/blueline.png" width="600">
 </p>
@@ -63,9 +63,9 @@ The following to-do task list should be followed in order. If you are experience
 - [x] **version 2.1 is being released**
 - [x] `Docker_images` removed from the whole project
 - [x] New logo represented for DBMQ v2.1
+- [ ] Start writing documentations (Sphinx)
 - [ ] Using python docker images instead of linux distros
 - [ ] New feature -> streaming the running containers
-- [ ] Start writing documentations (Sphinx+recommonmark)
 - [ ] Updating the links in the exceptions and repo 
 - [ ] Database implementation process
 - [ ] Broker implementation process
