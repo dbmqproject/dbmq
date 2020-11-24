@@ -1,7 +1,7 @@
 <p align="center">
   <img src=".git_components/images/logo.png" width="130"><br />
   Docker-based Message Queuing<br />
-  <a href="https://docker-py.readthedocs.io">Docker SDK</a> - <a href="https://medium.com/@lnxpy/sample-project-in-dbmq-v2-1-d4f8cb41108c">Article on Medium</a> - <a href="https://docs...">Read the Docs here ➤</a><br />
+  <a href="https://docker-py.readthedocs.io">Docker SDK</a> - <a href="https://medium.com/@lnxpy/sample-project-in-dbmq-v2-1-d4f8cb41108c">Article on Medium</a> - <a href="https://dbmq.readthedocs.io">Read the Docs here ➤</a><br />
   Create your Dockerized Django project and start using MBs<br />
   
   <img src="https://img.shields.io/badge/build-in progress-blue">
@@ -55,7 +55,7 @@ $ source .venv/bin/activate
 ```shell
 $ pip3 install -r requirements.txt
 ```
-Installation has been completed. For the further steps, check out the [documents](https://docs...).
+Installation has been completed. For the further steps, check out the [documents](https://dbmq.readthedocs.io).
 
 ### To-Do
 The following to-do task list should be followed in order. If you are experienced enough in these tasks, you can start contributing to DBMQ. Fork the project, create PRs and I'll review them. If you've done any further task, change your task context grammatically in the following list.
