@@ -15,7 +15,6 @@ This system locates between the user and the Docker service. You config your req
 You don't need to be a genius in Docker, just keep configuring.
 
 .. toctree::
-   :maxdepth: 2
    :caption: Table of Contents:
 
    topics/webserver_configurations.rst
@@ -65,14 +64,17 @@ create a new virtualenv named ``env`` within the directory. We have also activat
 
    $ pwd
    /path/to/dir/DBMQ/
-   $ virtualenv .venv && source .venv/bin/activate
+   $ virtualenv env && source env/bin/activate
+
+.. note::
+   Some developers wish to name their virtualenv ``.venv`` or ``.env``. It actually makes the directory hidden which is much prettier.
 
 Now, you are entered through your isolated environment. It's time to install the dependencies. DBMQ stores all dependencies 
 in a text file named ``requirements.txt``. Run the following command and it installs all dependencies automatically.
 
 .. code-block:: shell
 
-   $ pip install -r requirements.txt
+   (env)$ pip install -r requirements.txt
 
 Congratulations. Everything is ready to use. DBMQ has a default configuration that allows you to setup your applications as an 
-example.
+example. It's time to crack on with the next step which is configuring our services.
