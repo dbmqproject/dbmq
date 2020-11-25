@@ -1,5 +1,6 @@
-Web server Configurations
-=========================
+``webserver`` global configurations
+===================================
 
 .. toctree::
-    wc_subsections/server_configs.rst
+    wc_subsections/introduction.rst
+    wc_subsections/serverconfigs_configs.rst
