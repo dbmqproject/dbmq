@@ -49,6 +49,30 @@ clone the repository.
   $ git clone https://github.com/dbmqproject/dbmq.git/
 
 Once it's done, everything would be ready for the virtual environment. We are keeping up with ``virtualenv`` package
-which is available on 
+which is also available on 
 `PyPi
-<https://pypi.org/>`_.
+<https://pypi.org/>`_. In this example, we are using ``python3.8`` with ``pip3``. Make sure you have already installed 
+them on your machine, then run the following command to install the ``virtualenv`` on your machine.
+
+.. code-block:: shell
+
+   $ pip3 install virtualenv
+
+Once it's done, make sure you are already in the cloned DBMQ repository on your machine with the following command and 
+create a new virtualenv named ``env`` within the directory. We have also activate our environment using the ``source`` command as follows.
+
+.. code-block:: shell
+
+   $ pwd
+   /path/to/dir/DBMQ/
+   $ virtualenv .venv && source .venv/bin/activate
+
+Now, you are entered through your isolated environment. It's time to install the dependencies. DBMQ stores all dependencies 
+in a text file named ``requirements.txt``. Run the following command and it installs all dependencies automatically.
+
+.. code-block:: shell
+
+   $ pip install -r requirements.txt
+
+Congratulations. Everything is ready to use. DBMQ has a default configuration that allows you to setup your applications as an 
+example.
