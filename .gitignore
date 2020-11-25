@@ -143,3 +143,6 @@ dmypy.json
 
 # developement container extension
 .devcontainer
+
+# DBMQ handmade ignores
+*/.vscode
