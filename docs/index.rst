@@ -48,4 +48,7 @@ clone the repository.
 
   $ git clone https://github.com/dbmqproject/dbmq.git/
 
-Once it's done, everything would be ready for the virtual environment.
+Once it's done, everything would be ready for the virtual environment. We are keeping up with ``virtualenv`` package
+which is available on 
+`PyPi
+<https://pypi.org/>`_.
