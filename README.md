@@ -10,8 +10,6 @@
   <a href='https://dbmq.readthedocs.io/en/latest/?badge=latest'>
     <img src='https://readthedocs.org/projects/dbmq/badge/?version=latest' alt='Documentation Status' />
   </a><br />
-  
-  <img src=".git_components/images/objects/blueline.png" width="600">
 </p>
 
 ### Introduction
