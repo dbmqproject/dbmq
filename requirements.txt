@@ -16,7 +16,7 @@ ipython==7.18.1
 ipython-genutils==0.2.0
 isort==5.4.2
 jedi==0.17.2
-Jinja2==2.11.2
+Jinja2==2.11.3
 jupyter-client==6.1.7
 jupyter-core==4.6.3
 lazy-object-proxy==1.4.3
